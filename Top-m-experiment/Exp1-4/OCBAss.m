@@ -15,8 +15,7 @@ for t=1:num
         X0(i,:)=normrnd(mu,v.^(1/2));
     end
     estmean=mean(X0);
-    estvar=var(X0,1);
-    %estvar=var(X0);
+    estvar=var(X0);
     N=n0*ones(1,k);
     %     pv=(1./sigma0+N./estvar).^(-1);
     %     pm=pv.*(mu0./sigma0+N.*estmean./estvar);
@@ -63,8 +62,8 @@ for t=1:num
         estvar(id2)=(N(id2)./(N(id2)+1)).*(estvar(id2)+(mm-x).^2./(N(id2)+1));
         N(id2)=N(id2)+1;
         wt=N./sum(N);
-        %         pv(id2)=(1./sigma0(id2)+N(id2)./estvar(id2))^(-1); %ĞÂµÄºóÑé·½²î
-        %         pm(id2)=pv(id2).*(mu0(id2)./sigma0(id2)+N(id2).*estmean(id2)./estvar(id2)); %ĞÂµÄºóÑé¾ùÖµ
+        %         pv(id2)=(1./sigma0(id2)+N(id2)./estvar(id2))^(-1); %æ–°çš„åéªŒæ–¹å·®
+        %         pm(id2)=pv(id2).*(mu0(id2)./sigma0(id2)+N(id2).*estmean(id2)./estvar(id2)); %æ–°çš„åéªŒå‡å€¼
     end
 end
 toc
