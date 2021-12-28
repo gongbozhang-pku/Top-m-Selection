@@ -13,7 +13,6 @@ for t=1:num
     end
     estmean=mean(X0);
     estvar=var(X0);
-    %estvar=var(X0);
     N=n0*ones(1,k);
     Nrv=normrnd(0,1,1,T);
     [~,rb]=sort(mu,'descend');
