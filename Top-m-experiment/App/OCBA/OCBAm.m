@@ -12,7 +12,7 @@ for t=1:num
         X0(i,:)=normrnd(mu,v.^(1/2));
     end
     estmean=mean(X0);
-    estvar=var(X0,1);
+    estvar=var(X0);
     %estvar=var(X0);
     N=n0*ones(1,k);
     Nrv=normrnd(0,1,1,T);
