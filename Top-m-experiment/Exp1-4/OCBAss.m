@@ -62,8 +62,8 @@ for t=1:num
         estvar(id2)=(N(id2)./(N(id2)+1)).*(estvar(id2)+(mm-x).^2./(N(id2)+1));
         N(id2)=N(id2)+1;
         wt=N./sum(N);
-        %         pv(id2)=(1./sigma0(id2)+N(id2)./estvar(id2))^(-1); %新的后验方差
-        %         pm(id2)=pv(id2).*(mu0(id2)./sigma0(id2)+N(id2).*estmean(id2)./estvar(id2)); %新的后验均值
+        %         pv(id2)=(1./sigma0(id2)+N(id2)./estvar(id2))^(-1);
+        %         pm(id2)=pv(id2).*(mu0(id2)./sigma0(id2)+N(id2).*estmean(id2)./estvar(id2)); 
     end
 end
 toc
